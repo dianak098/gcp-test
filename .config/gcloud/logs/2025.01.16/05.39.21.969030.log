@@ -1,0 +1,29 @@
+2025-01-16 05:39:21,971 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2025-01-16 05:39:21,973 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'config_helper']
+2025-01-16 05:39:21,976 DEBUG    root            Running [gcloud.config.config-helper] with arguments: [--format: "json"]
+2025-01-16 05:39:21,993 DEBUG    root            Chosen display Format:default json
+2025-01-16 05:39:21,994 INFO     root            Display format: "default json"
+2025-01-16 05:39:22,010 INFO     ___FILE_ONLY___ {
+  "configuration": {
+    "active_configuration": "default",
+    "properties": {
+      "core": {
+        "account": "575618077491-compute@developer.gserviceaccount.com",
+        "disable_usage_reporting": "False",
+        "project": "svc-250115"
+      }
+    }
+  },
+  "credential": {
+    "access_token": "ya29.c.c0ASRK0GY0wr6UEqj1_JYQOS1kQVabG2CwBc52F4tC2l9Sh3mag9fFgZAzWvZeiSDL7PSYpg4OP0SCZACS1VTTIKmfzo4AxoWz7iVDYekYKEmFmwF8WZ7fmhakgEGRIfzDXy448Ueuzpg0GJxX1SIpge5rte1Bjae-9KEcua6N8sFfm-ih8rebJGwGmPY1NpouWfh8MoTk9zF-F2GFsl0_yOEqJrUkJi9gCGVfFng5vDfFgWOReXGmMjE2XStS3ZzzZrZlVpE1DzxQeY8cBJArusJRo2ZU5hUVhL2IfRovzsTH82v9qMd5zs5HVX6DkcipiCnJqr1m0eo-M0gaRuz1giAJ9wCeH14OKERnysrlOccR9qPiQ78Pi0nN2ni5BbJlUILM429GrKrBAJK24g4L412DZSyMRrwRWyxoMBb80zmYxyvfbmvIBeuV2djvlqYcu-Ozq3aiUSkzggnp5jmXFuZOdSkxQObo4t1eFFJ77yvM-dZwdlf2fXRYj7Os2Fv9jexwcR0XOBteJIo75BYw00lcgZr8QeVW9RdkpkoBrcqSW8BB62hBcUrbyev49045m56yiJn97OIoWZYvkV9ZilmFZmdzcZJVo9u8Bh9cOltbiaOW-J1R5Fps3oIaSOX5ZsZJv3F3h8jFxeY9WwJBqxSFQ_zmyhjz-9OsZ9fWm8iJO9m-d6I6Yyg1_Yy_XXyyYQXtWvbFOZsnmMBQpsZ-O9Z5ZIeepJQaYd3d8vFBoF2wOaoRtQWtFismMe68mX9rSrtlXe8nmxii4t34uygFmFIcI_n8q15t-wxxsbwMBbdkwwZpjBiQqzwbi6q4-B-lps8mtvz3ikxFiB3mkfjai9fzJfiqrF7loet-oe8kWfryvXgQRVf8J5V6q9v-02FU86e_iVtO66gc895xI264tX9zWw-xvVUB2kyk-7d8ncIj58FWBFFl7Sge32lBkIU-junFnpSYMuYVlwvyzJJbuislVgtXaU6nsym24oYOWzVOn5l3teixXMB",
+    "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImRkMTI1ZDVmNDYyZmJjNjAxNGFlZGFiODFkZGYzYmNlZGFiNzA4NDciLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiIzMjU1NTk0MDU1OS5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImF6cCI6IjExNzU3MzIwOTUwNDA5MzI4OTEzNCIsImV4cCI6MTczNzAwOTIwMSwiaWF0IjoxNzM3MDA1NjAxLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJzdWIiOiIxMTc1NzMyMDk1MDQwOTMyODkxMzQifQ.PPfwKhIEDkrVrOcvtMOLA09FW3djC99r0j6lusx9YhfQF_ZpNWIqpmosMfZp6ccQhUExaB-T3pk4uHtJUmHySYLEo0l9I52nhBWvw2Aj7ZfVpbziaiXuwhkgZnin4b9r-W3HQMNWMKpfoa4M5zzuMrEdRPjZLj3Zbhwxsk3diGQLEfDekko8yNdSAPIkBLsh8-bORQlQnJt_kTvBtE-_Dnem8Q_YFjgP2lP22OufHiI5oryo2HIgVALXtGYBa6_FFMyXaP9Mq8xlpukEPi1dpbz5-g63UD6jPF_tZ4ZRfBfQ_yfD1hrxXMiFyyv7F-OZGr2q9gnf69XJIuLFWRp85g",
+    "token_expiry": "2025-01-16T06:29:46Z"
+  },
+  "sentinels": {
+    "config_sentinel": "/home/mzs01-dianak/.config/gcloud/config_sentinel"
+  }
+}
+2025-01-16 05:39:22,010 INFO     ___FILE_ONLY___ 
+
+2025-01-16 05:39:22,010 DEBUG    root            SDK update checks are disabled.
+2025-01-16 05:39:22,015 DEBUG    root            Metrics reporting process started...

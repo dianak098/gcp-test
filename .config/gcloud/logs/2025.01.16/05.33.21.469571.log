@@ -1,0 +1,20 @@
+2025-01-16 05:33:21,484 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters']
+2025-01-16 05:33:21,488 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters', 'get_credentials']
+2025-01-16 05:33:21,651 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/575618077491-compute@developer.gserviceaccount.com/?recursive=true
+2025-01-16 05:33:21,655 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2025-01-16 05:33:21,657 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/575618077491-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 142
+2025-01-16 05:33:21,660 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/575618077491-compute@developer.gserviceaccount.com/token
+2025-01-16 05:33:21,662 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/575618077491-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 866
+2025-01-16 05:33:21,725 DEBUG    root            Running [gcloud.container.clusters.get-credentials] with arguments: [--project: "svc-250115", --region: "asia-northeast3", NAME: "std-cluster-1"]
+2025-01-16 05:33:21,750 INFO     ___FILE_ONLY___ Fetching cluster endpoint and auth data.
+
+2025-01-16 05:33:21,753 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): container.googleapis.com:443
+2025-01-16 05:33:21,841 DEBUG    urllib3.connectionpool https://container.googleapis.com:443 "GET /v1/projects/svc-250115/locations/asia-northeast3/clusters/std-cluster-1?alt=json HTTP/1.1" 200 None
+2025-01-16 05:33:21,851 WARNING  root            cluster std-cluster-1 is not RUNNING. The kubernetes API may or may not be available. Check the cluster status for more information.
+2025-01-16 05:33:21,974 DEBUG    root            Saved kubeconfig to /home/mzs01-dianak/.kube/config
+2025-01-16 05:33:21,974 INFO     ___FILE_ONLY___ kubeconfig entry generated for std-cluster-1.
+
+2025-01-16 05:33:21,975 DEBUG    root            Chosen display Format:default
+2025-01-16 05:33:21,976 INFO     root            Display format: "default"
+2025-01-16 05:33:21,976 DEBUG    root            SDK update checks are disabled.
+2025-01-16 05:33:21,979 DEBUG    root            Metrics reporting process started...

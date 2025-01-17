@@ -1,0 +1,14 @@
+2025-01-17 03:13:48,121 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters']
+2025-01-17 03:13:48,123 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters', 'get_credentials']
+2025-01-17 03:13:48,181 DEBUG    root            Running [gcloud.container.clusters.get-credentials] with arguments: [--project: "svc-250115", --region: "asia-northeast3", NAME: "std-cluster-1"]
+2025-01-17 03:13:48,195 INFO     ___FILE_ONLY___ Fetching cluster endpoint and auth data.
+
+2025-01-17 03:13:48,198 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): container.googleapis.com:443
+2025-01-17 03:13:48,274 DEBUG    urllib3.connectionpool https://container.googleapis.com:443 "GET /v1/projects/svc-250115/locations/asia-northeast3/clusters/std-cluster-1?alt=json HTTP/1.1" 200 None
+2025-01-17 03:13:48,412 DEBUG    root            Saved kubeconfig to /home/mzs01-dianak/.kube/config
+2025-01-17 03:13:48,412 INFO     ___FILE_ONLY___ kubeconfig entry generated for std-cluster-1.
+
+2025-01-17 03:13:48,413 DEBUG    root            Chosen display Format:default
+2025-01-17 03:13:48,413 INFO     root            Display format: "default"
+2025-01-17 03:13:48,414 DEBUG    root            SDK update checks are disabled.
+2025-01-17 03:13:48,417 DEBUG    root            Metrics reporting process started...

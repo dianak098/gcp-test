@@ -1,0 +1,83 @@
+2025-01-17 03:12:53,372 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters']
+2025-01-17 03:12:53,376 DEBUG    root            Loaded Command Group: ['gcloud', 'container', 'clusters', 'get_credentials']
+2025-01-17 03:12:53,466 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/575618077491-compute@developer.gserviceaccount.com/?recursive=true
+2025-01-17 03:12:53,468 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2025-01-17 03:12:53,469 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/575618077491-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 142
+2025-01-17 03:12:53,470 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/575618077491-compute@developer.gserviceaccount.com/token
+2025-01-17 03:12:53,472 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/575618077491-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 870
+2025-01-17 03:12:53,528 DEBUG    root            Running [gcloud.container.clusters.get-credentials] with arguments: [--project: "svc-241004", --zone: "asia-northeast3-c", NAME: "standard-cluster"]
+2025-01-17 03:12:53,556 INFO     ___FILE_ONLY___ Fetching cluster endpoint and auth data.
+
+2025-01-17 03:12:53,558 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): container.googleapis.com:443
+2025-01-17 03:12:53,628 DEBUG    urllib3.connectionpool https://container.googleapis.com:443 "GET /v1/projects/svc-241004/locations/asia-northeast3-c/clusters/standard-cluster?alt=json HTTP/1.1" 403 None
+2025-01-17 03:12:53,633 DEBUG    root            (gcloud.container.clusters.get-credentials) ResponseError: code=403, message=Permission denied on resource project svc-241004. This command is authenticated as 575618077491-compute@developer.gserviceaccount.com which is the active account specified by the [core/account] property.
+Traceback (most recent call last):
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/container/api_adapter.py", line 1815, in GetCluster
+    return self.client.projects_locations_clusters.Get(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/generated_clients/apis/container/v1/container_v1_client.py", line 628, in Get
+    return self._RunMethod(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 747, in _RunMethod
+    return self.ProcessHttpResponse(method_config, http_response, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 753, in ProcessHttpResponse
+    self.__ProcessHttpResponse(method_config, http_response, request))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 612, in __ProcessHttpResponse
+    raise exceptions.HttpError.FromResponse(
+apitools.base.py.exceptions.HttpForbiddenError: HttpError accessing <https://container.googleapis.com/v1/projects/svc-241004/locations/asia-northeast3-c/clusters/standard-cluster?alt=json>: response: <{'vary': 'Origin, X-Origin, Referer', 'content-type': 'application/json; charset=UTF-8', 'content-encoding': 'gzip', 'date': 'Fri, 17 Jan 2025 03:12:53 GMT', 'server': 'ESF', 'x-xss-protection': '0', 'x-frame-options': 'SAMEORIGIN', 'x-content-type-options': 'nosniff', 'transfer-encoding': 'chunked', 'status': 403}>, content <{
+  "error": {
+    "code": 403,
+    "message": "Permission denied on resource project svc-241004.",
+    "status": "PERMISSION_DENIED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "CONSUMER_INVALID",
+        "domain": "googleapis.com",
+        "metadata": {
+          "consumer": "projects/svc-241004",
+          "containerInfo": "svc-241004",
+          "service": "container.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.LocalizedMessage",
+        "locale": "en-US",
+        "message": "Permission denied on resource project svc-241004."
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Google developers console",
+            "url": "https://console.developers.google.com"
+          }
+        ]
+      }
+    ]
+  }
+}
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 998, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 934, in Run
+    resources = command_instance.Run(args)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/surface/container/clusters/get_credentials.py", line 120, in Run
+    cluster, cluster_ref = _BaseRun(args, self.context)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/surface/container/clusters/get_credentials.py", line 41, in _BaseRun
+    cluster = adapter.GetCluster(cluster_ref)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/container/api_adapter.py", line 1824, in GetCluster
+    raise exceptions.HttpException(error, util.HTTP_ERROR_FORMAT)
+googlecloudsdk.calliope.exceptions.HttpException: ResponseError: code=403, message=Permission denied on resource project svc-241004. This command is authenticated as 575618077491-compute@developer.gserviceaccount.com which is the active account specified by the [core/account] property.
+2025-01-17 03:12:53,645 ERROR    root            (gcloud.container.clusters.get-credentials) ResponseError: code=403, message=Permission denied on resource project svc-241004. This command is authenticated as 575618077491-compute@developer.gserviceaccount.com which is the active account specified by the [core/account] property.
+2025-01-17 03:12:53,665 DEBUG    root            Metrics reporting process started...
